@@ -1,0 +1,52 @@
+﻿<Window x:Class="Exam_VarII.AddDisc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam_VarII"
+        mc:Ignorable="d"
+        Title="Поступление товара" Height="550" Width="550">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin" Value="1" />
+            <Setter Property="Width" Value="500"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <TextBlock Text="Добавление пластинок" HorizontalAlignment="Center" Margin="30"/>
+            <TextBlock Text="Введете название альбома"/>
+            <TextBox x:Name="NameCd"/>
+            <TextBlock Text="Введете Исполнителя"/>
+            <TextBox x:Name="NameBand"/>
+            <TextBlock Text="Введете Издателя"/>
+            <TextBox x:Name="NamePublisher"></TextBox>
+            <TextBlock Text="Введете количество треков в альбоме"/>
+            <TextBox x:Name="AmountTrack"></TextBox>
+            <TextBlock Text="Введете жанр"/>
+            <TextBox x:Name="NameGenre"></TextBox>
+            <TextBlock Text="Ввдете год издания альбома"/>
+            <TextBox x:Name="YearPublisher"></TextBox>
+            <TextBlock Text="Ввдете себестоимость пластинки"/>
+            <TextBox x:Name="NetCoast"></TextBox>
+            <TextBlock Text="Ввдете цену для продажи"/>
+            <TextBox x:Name="SalePrice"></TextBox>
+            <TextBlock Text="Ввдете количество поступивших экземпляров"/>
+            <TextBox x:Name="AmountDisc"></TextBox>
+            <TextBlock Text="Ввдете дату поступления"/>
+            <TextBox x:Name="DateIncome"></TextBox>
+            <Button Content="Добавить пластинку" Click="AddCd" Width="150" Margin="10"/>
+
+            <TextBlock Name="tbResults" Margin="5" Width="300"/>
+        </StackPanel>
+        <!--<DataGrid Name="dgMain" SelectionChanged="dgMain_SelectionChanged"/>-->
+    </DockPanel>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="Exam_VarII.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam_VarII"
+        mc:Ignorable="d"
+        Title="Музыкальный магазин" Height="600" Width="400">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Width" Value="300"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <TextBlock Text="Магазин пластинок"  HorizontalAlignment="Center" Margin="10"/>
+            <Button Click="ShowProduct" Content="Каталог пластинок"/>
+            <Button Click="AddProduct" Content="Добавить пластинку"/>
+            <Button Click="DeletProduct" Content="Удалить пластинку"/>
+            <Button Click="UpdateProduct" Content="Редактировать информацию о пластинке"/>
+            <Button Click="SaleProduct" Content="Продать пластинку"/>
+            <Button Click="FindeProductName" Content="Поиск пластинок по названию альбома"/>
+            <Button Click="FindeProductSinger" Content="Поиск пластинок по исполнителю"/>
+            <Button Click="FindeProductGenre" Content="Поиск пластинок по жанру"/>
+            <Button Click="ShowNew" Content="Показать новинки"/>
+            <Button Click="ShowBestSaler" Content="Показать популярные альбомы"/>
+            <Button Click="ShowMostPopular" Content="Показать популярных исполнителей"/>
+            <TextBlock Name="tbResults"/>
+        </StackPanel>
+        <DataGrid Name="dgMain" SelectionChanged="dgMain_SelectionChanged" CanUserDeleteRows="False" CanUserAddRows="False" CanUserResizeRows="False" CanUserSortColumns="False"/>
+    </DockPanel>
+</Window>

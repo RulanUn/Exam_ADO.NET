@@ -1,0 +1,24 @@
+﻿<Window x:Class="Exam_VarII.FindeGenre"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exam_VarII"
+        mc:Ignorable="d"
+        Title="Поиск по жанру" Height="110" Width="200">
+    <StackPanel>
+        <TextBlock Text="Выберите жанр" HorizontalAlignment="Center" Margin="5"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" Height="25" Width="100" SelectedIndex="0" Name="cmbDeviceDefinitionId" Margin="5">
+            <TextBlock Text=""/>
+            <ComboBoxItem Name="Pop" Selected="Pop_Selected">Поп</ComboBoxItem>
+            <ComboBoxItem Name="Rock" Selected="Rock_Selected">Рок</ComboBoxItem>
+            <ComboBoxItem Name="Jaz" Selected="Jaz_Selected">Джаз</ComboBoxItem>
+            <ComboBoxItem Name="Classic" Selected="Classic_Selected">Классика</ComboBoxItem>
+            <ComboBoxItem Name="Metall" Selected="Metall_Selected">Метал</ComboBoxItem>
+            <ComboBoxItem Name="Bluz" Selected="Bluz_Selected">Блюз</ComboBoxItem>
+            <ComboBoxItem Name="Rep" Selected="Rep_Selected">Рэп</ComboBoxItem>
+
+            <ListBox x:Name="genreList" />
+        </ComboBox>
+    </StackPanel>
+</Window>
